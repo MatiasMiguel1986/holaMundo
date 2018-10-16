@@ -3,4 +3,14 @@
   <groupId>com.prueba.toto</groupId>
   <artifactId>holaMundo</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>5.0.0.RELEASE</version>
+		</dependency>
+		
+	</dependencies>
+		
 </project>
