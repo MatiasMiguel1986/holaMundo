@@ -1,6 +1,7 @@
 package com.holamundo.app.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -13,4 +14,17 @@ public class HomeController {
 		return "home";
 	}
 
+	@RequestMapping(value="/detail")
+	public String mostrarDetalle(Model model)
+	{
+		String tituloPelicula = "Robocop";
+		int duracion = 136;
+		double precioEntrada = 50;
+		
+		model.addAttribute("titulo", tituloPelicula);
+		model.addAttribute("duracion", duracion);
+		model.addAttribute("precio", precioEntrada);
+		
+		return "detalle";
+	}
 }
