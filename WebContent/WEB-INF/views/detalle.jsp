@@ -9,7 +9,7 @@
 <body>
 	<h1>Titulo de la pelicula: ${titulo }</h1>
 	<h2>Duración: ${duracion } min.</h1>
-	<h2>Precio:  ${precio } min.</h1>
+	<h2>Precio: $ ${precio } </h1>
 
 </body>
 </html>

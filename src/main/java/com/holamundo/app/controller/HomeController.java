@@ -1,5 +1,8 @@
 package com.holamundo.app.controller;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,6 +14,22 @@ public class HomeController {
 	@RequestMapping(value="/home", method=RequestMethod.GET)
 	public String goHome()
 	{
+		return "home";
+	}
+	
+	@RequestMapping(value="/", method=RequestMethod.GET)
+	public String mostrarPrincipal(Model model)
+	{
+		List<String> peliculas = new ArrayList<String>();
+		
+		peliculas.add("Rapido y Furioso");
+		peliculas.add("El aro");
+		peliculas.add("Alien");
+		
+		model.addAttribute("peliculas", peliculas);
+		
+		
+		
 		return "home";
 	}
 
