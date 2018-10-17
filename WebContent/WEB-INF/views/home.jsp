@@ -1,7 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+	pageEncoding="ISO-8859-1"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
 
 <!DOCTYPE html>
 <html>
@@ -10,38 +14,47 @@
 <title>Bienvenidos a Cineapp</title>
 </head>
 <body>
-	<h1>Lista de peliculas</h1>
 
 
-	<o1> <c:forEach items="${peliculas }" var="pelicula">
+
+	<%-- <o1> <c:forEach items="${peliculas }" var="pelicula">
 		<li>${pelicula }</li>
-	</c:forEach> </o1>
-	Tabla de películas
+	</c:forEach> </o1>--%>
+	<div class="card">
+		<div class="card-header">Lista de Películas</div>
 
-	<table border="1">
-		<thread>
+		<table class="table table-hover">
+			<thread>
 			<tr>
 				<th>Id</th>
 				<th>Titulo</th>
 				<th>Duracion</th>
 				<th>Clasificacion</th>
 				<th>Genero</th>
-			
-			</tr>
-		</thread>
-		<tbody>
-			<c:forEach items="${peliculas }" var="pelicula">
-			<tr>
-				<td>${pelicula.id }</td>
-				<td>${pelicula.titulo }</td>
-				<td>${pelicula.duracion } min.</td>
-				<td>${pelicula.clasificacion }</td>
-				<td>${pelicula.genero }</td>
-			</tr>
-			</c:forEach> </o1>
+				<th>Imagen</th>
+				<th>Fecha de Estreno</th>
+				<th>Estatus</th>
 
-		</tbody>
-	</table>
+			</tr>
+			</thread>
+			<tbody>
+				<c:forEach items="${peliculas }" var="pelicula">
+					<tr>
+						<td>${pelicula.id }</td>
+						<td>${pelicula.titulo }</td>
+						<td>${pelicula.duracion }min.</td>
+						<td>${pelicula.clasificacion }</td>
+						<td>${pelicula.genero }</td>
+						<td>${pelicula.imagen }</td>
+						<td>${pelicula.genero }</td>
+						<td>${pelicula.fechaEstreno }</td>
+						<td>${pelicula.status }</td>
+					</tr>
+				</c:forEach>
+				</o1>
 
+			</tbody>
+		</table>
+	</div>
 </body>
 </html>
