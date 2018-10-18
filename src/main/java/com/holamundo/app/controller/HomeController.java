@@ -59,7 +59,7 @@ public class HomeController {
 			lista = new ArrayList<Pelicula>();
 			Pelicula pelicula1 = new Pelicula();
 			pelicula1.setId(1);
-			pelicula1.setTitulo("Pelicula 1");
+			pelicula1.setTitulo("Robocop");
 			pelicula1.setDuracion(120);
 			pelicula1.setClasificacion("B");
 			pelicula1.setGenero("Aventura");
@@ -69,7 +69,7 @@ public class HomeController {
 
 			Pelicula pelicula2 = new Pelicula();
 			pelicula2.setId(2);
-			pelicula2.setTitulo("Pelicula 2");
+			pelicula2.setTitulo("Forest Gump");
 			pelicula2.setDuracion(110);
 			pelicula2.setClasificacion("A");
 			pelicula2.setGenero("Infantil");
@@ -79,17 +79,17 @@ public class HomeController {
 			
 			Pelicula pelicula3 = new Pelicula();
 			pelicula3.setId(3);
-			pelicula3.setTitulo("Pelicula 3");
+			pelicula3.setTitulo("Terminator");
 			pelicula3.setDuracion(150);
 			pelicula3.setClasificacion("C");
 			pelicula3.setGenero("Aventura");
 			pelicula3.setFechaEstreno(formatter.parse("06-08-2018"));
-			pelicula2.setImagen("terminator.png");
-			pelicula2.setStatus("Activo");
+			pelicula3.setImagen("terminator.png");
+			pelicula3.setStatus("Activo");
 			
 			Pelicula pelicula4 = new Pelicula();
 			pelicula4.setId(4);
-			pelicula4.setTitulo("Pelicula 4");
+			pelicula4.setTitulo("Top Gun");
 			pelicula4.setDuracion(80);
 			pelicula4.setClasificacion("A");
 			pelicula4.setGenero("Aventura");
@@ -100,6 +100,7 @@ public class HomeController {
 			lista.add(pelicula1);
 			lista.add(pelicula2);
 			lista.add(pelicula3);
+			lista.add(pelicula4);
 			
 			
 		} catch (ParseException e) {
